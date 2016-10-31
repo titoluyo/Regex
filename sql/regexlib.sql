@@ -1,0 +1,17 @@
+--DROP TABLE RegexLib
+--
+/*
+CREATE TABLE RegexLib
+(
+	ID int NOT NULL,
+	Title NVARCHAR(max) NOT NULL,
+	Expression NVARCHAR(max) NOT NULL,
+	Description NVARCHAR(max) NOT NULL,
+	Matched NVARCHAR(max) NOT NULL,
+	NonMatched NVARCHAR(max) NOT NULL,
+	CONSTRAINT pk_RegexLib PRIMARY KEY CLUSTERED (ID ASC)
+)
+--*/
+
+--TRUNCATE TABLE RegexLib
+SELECT * FROM RegexLib ORDER BY ID DESC
