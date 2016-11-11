@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tlm.AssyToBin", "AssyToBin\
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "tlm.SqlFunctions", "tlm.SqlFunctions\tlm.SqlFunctions.sqlproj", "{AAFD86D6-767B-4030-B018-0F54A061437B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generic.Text.RegularExpressions", "Verizon.Text.RegularExpressions\Generic.Text.RegularExpressions.csproj", "{D52D67B0-5BD4-446C-919A-8790896339BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{AAFD86D6-767B-4030-B018-0F54A061437B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAFD86D6-767B-4030-B018-0F54A061437B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AAFD86D6-767B-4030-B018-0F54A061437B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D52D67B0-5BD4-446C-919A-8790896339BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D52D67B0-5BD4-446C-919A-8790896339BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D52D67B0-5BD4-446C-919A-8790896339BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D52D67B0-5BD4-446C-919A-8790896339BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

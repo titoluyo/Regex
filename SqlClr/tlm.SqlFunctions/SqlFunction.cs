@@ -1,11 +1,8 @@
 using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
 using System.Data.SqlTypes;
-using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
+using Generic.Text.RegularExpressions;
 using Microsoft.SqlServer.Server;
 
 public partial class UserDefinedFunctions
@@ -27,7 +24,23 @@ public partial class UserDefinedFunctions
     {
         try
         {
+            //var x = System.Text.RegularExpressions.MatchCollection
             var regex = new Regex(pattern.Value, Options);
+            return regex.IsMatch(new string(input.Value));
+        }
+        catch
+        {
+            return false;
+        }
+    }
+
+    [SqlFunction]
+    public static SqlBoolean RegexMatch(SqlChars input, SqlString pattern, SqlInt32 timeout)
+    {
+        try
+        {
+            //var x = System.Text.RegularExpressions.MatchCollection
+            var regex = new Regex(pattern.Value, Options,new TimeSpan(0,0,0,0,timeout.Value));
             return regex.IsMatch(new string(input.Value));
         }
         catch
@@ -63,6 +76,7 @@ public partial class UserDefinedFunctions
             return SqlString.Null;
 
         var r = new Regex(pattern.ToString());
+        
         return new SqlString(r.Replace(expression.ToString(), replace.ToString()));
     }
 
